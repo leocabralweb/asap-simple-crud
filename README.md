@@ -11,7 +11,7 @@ https://nameless-thicket-68176.herokuapp.com/
     ```
 2. Install requirements:
     ```sh
-    pip install requirements.txt
+    pip install -r requirements.txt
     ```
 3. Export database configuration URL to DATABASE_URL env var:
     ```
