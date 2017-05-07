@@ -10,7 +10,7 @@ from shows.models import Show, Schedule
 @register(Show)
 class ShowAdmin(admin.ModelAdmin):
     list_display = ("published", "name", "duration")
-    list_display_links = ("admin_logo", "name", "duration")
+    list_display_links = ("name", "duration")
     list_filter = ("published", )
     search_fields = ("name", )
 
