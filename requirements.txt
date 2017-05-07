@@ -3,3 +3,5 @@ pytz==2017.2
 gunicorn==19.7.1
 Pillow==4.1.1
 django-imagekit==4.0
+dj-database-url==0.4.2
+psycopg2==2.7.1
