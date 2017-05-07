@@ -39,6 +39,10 @@ class Schedule(BaseModel):
     end = models.DateTimeField(_(u"End"), blank=True,
                                help_text=_(u"Leave blank to automatic fill."))
 
+    def __unicode__(self):
+        return u"{} - {}".format(self.show.name,
+                                 self.start.strftime("%d/%m/%Y %H:%m"))
+
 @receiver(pre_save, sender=Schedule)
 def calculate_schedule_end(sender, instance, **kwargs):
     if not instance.end:
