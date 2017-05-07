@@ -3,17 +3,13 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 from django.contrib.admin import register
-from imagekit.admin import AdminThumbnail
 
 from shows.models import Show, Schedule
 
 
 @register(Show)
 class ShowAdmin(admin.ModelAdmin):
-    admin_logo = AdminThumbnail("logo")
-    admin_logo.short_description = "Logo"
-
-    list_display = ("published", "admin_logo", "name", "duration")
+    list_display = ("published", "name", "duration")
     list_display_links = ("admin_logo", "name", "duration")
     list_filter = ("published", )
     search_fields = ("name", )
